@@ -167,7 +167,6 @@ porcentajeOutlier = length(temp)/nrow(dtprice)
 esCuantitativa <- c(T, F, F, F, T, T, T, T, T, T)
 nombresColumnas <- colnames(dt)
 
-print("Variables con un porcentaje de outliers mayor de 0.3 (30%)")
 for(col in 1:ncol(dt)){
   if(!esCuantitativa[col]){
     temp<-outliers(as.numeric(dt[,col]))
